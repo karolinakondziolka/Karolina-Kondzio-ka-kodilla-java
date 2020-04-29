@@ -11,8 +11,6 @@ class Program
         {
             LocalTime clockTime;
 
-
-
             public Clock(int hour, int minute)
             {
                 this.clockTime = LocalTime.of(hour,minute);
@@ -52,9 +50,6 @@ class Program
         {
             System.out.println(theClock.clockTime.plusMinutes(1));
         }
-
-
-
     }
 }
 
