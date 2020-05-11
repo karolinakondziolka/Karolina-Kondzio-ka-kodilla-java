@@ -17,7 +17,7 @@ public class StatisticsTestSuite {
     }
 
     @Test
-    public void testCalculateStatisticWhenPostCountIs0(){
+    public void testCalculateStatisticWhenPostCountIsNull(){
         //Given
     Statistics statistics = mock(Statistics.class);
     when(statistics.usersNames()).thenReturn(new ArrayList<>());

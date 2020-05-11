@@ -15,19 +15,19 @@ public class StatisticsCounter {
         this.usersNamesQuantity = statistics.usersNames().size();
         this.postsCount = statistics.postsCount();
         this.commentsCount = statistics.commentsCount();
-        if(usersNamesQuantity!=0) {
+        if (usersNamesQuantity != 0) {
             this.postsPerUser = this.postsCount / this.usersNamesQuantity;
-        }else{
+        } else {
             postsPerUser = 0.0;
         }
-        if(usersNamesQuantity!=0) {
+        if (usersNamesQuantity != 0) {
             this.commentsPerUser = this.commentsCount / this.usersNamesQuantity;
-        }else {
+        } else {
             commentsPerUser = 0.0;
         }
-        if(postsCount!=0) {
+        if (postsCount != 0) {
             this.commentsPerPost = this.commentsCount / this.postsCount;
-        }else {
+        } else {
             commentsPerPost = 0.0;
         }
 
@@ -56,12 +56,7 @@ public class StatisticsCounter {
     public double getCommentsPerPost() {
         return commentsPerPost;
     }
-
-
-
-
-
-    }
+}
 
 
 
