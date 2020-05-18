@@ -1,6 +1,7 @@
 package com.kodilla.stream;
 
 
+import com.kodilla.stream.beautifier.PoemBeautifier;
 import com.kodilla.stream.forumuser.Forum;
 import com.kodilla.stream.forumuser.ForumUser;
 
@@ -11,17 +12,13 @@ import java.util.stream.Collectors;
 
 public class StreamMain {
     public static void main(String[] args) {
-        Forum forum = new Forum();
-        Map<Integer, ForumUser> theForumUserList = forum.getUserList().stream()
-                .filter(forumUser -> forumUser.getSex()== 'M')
-                .filter(forumUser -> Period.between(forumUser.getDateOfBirth(), LocalDate.now()).getYears()>20)
-                .filter(forumUser -> forumUser.getNumbersOfPosts() >0)
-                .collect(Collectors.toMap(ForumUser::getId, forumUser-> forumUser));
+        PoemBeautifier poemBeautifier = new PoemBeautifier();
 
-        theForumUserList.entrySet().stream()
-                .map(entry -> entry.getKey() + ": " + entry.getValue())
-                .forEach(System.out::println);
-
+        poemBeautifier.beautify("Text number 1", (text -> "ABC "+ text +" ABC") );
+        poemBeautifier.beautify("Text number 2", (text ->  text.toUpperCase()) );
+        poemBeautifier.beautify("Text number 3", (text ->  text.toLowerCase()) );
+        poemBeautifier.beautify("Text number 4", (text ->  text +" "+ text +" "+ text));
     }
+
 }
 
