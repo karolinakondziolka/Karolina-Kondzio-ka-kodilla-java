@@ -1,6 +1,5 @@
 rootProject.name = 'kodilla-course'
 include 'kodilla-testing'
 include 'user'
-include 'kodilla-atream'
 include 'kodilla-stream'
 
