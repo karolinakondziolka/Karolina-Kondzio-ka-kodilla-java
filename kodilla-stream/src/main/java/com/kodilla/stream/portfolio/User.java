@@ -21,7 +21,6 @@ public final class User {
     public String toString() {
         return "User{" +
                 "username='" + username + '\'' +
-
                 '}';
     }
 

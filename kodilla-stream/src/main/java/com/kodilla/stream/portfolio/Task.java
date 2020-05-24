@@ -54,7 +54,6 @@ public final class Task {
                 ", deadline=" + deadline +
                 '}' +"\n";
     }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

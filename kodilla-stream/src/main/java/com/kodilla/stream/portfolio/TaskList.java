@@ -38,8 +38,8 @@ public final class TaskList {
 
         TaskList taskList = (TaskList) o;
 
-        if (!tasks.equals(taskList.tasks)) return false;
         return name.equals(taskList.name);
+
     }
 
 }
