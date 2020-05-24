@@ -10,7 +10,6 @@ public final class Board {
     public Board(final String name) {
         this.name = name;
     }
-
     public void addTaskList(TaskList taskList) {
         taskLists.add(taskList);
     }

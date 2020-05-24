@@ -152,7 +152,7 @@ public class BoardTestSuite {
                         .filter(inProgressTasks::contains)
                         .flatMap(tl -> tl.getTasks().stream())
                         .mapToLong(task -> DAYS.between(task.getCreated(), LocalDate.now()))
-                        .average().orElse(10.0)
+                        .average().orElse(0.0)
         );
         //Then
         Assert.assertEquals(10, averageWorkingDays, 0);
